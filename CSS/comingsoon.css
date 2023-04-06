@@ -1,0 +1,58 @@
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body, html {
+    height: 100%
+  }
+  
+  .bgimg {
+    /* Background image */
+    background-image: url('../img/comingsoon/animation.gif');
+    /* Full-screen */
+    height: 100%;
+    /* Center the background image */
+    background-position: center;
+    /* Scale and zoom in the image */
+    background-size: cover;
+    /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+    position: relative;
+    /* Add a white text color to all elements inside the .bgimg container */
+    color: rgb(0, 0, 0);
+    /* Add a font */
+    font-family: Mulish;
+    font-weight: 800;
+    /* Set the font-size to 25 pixels */
+    font-size: 25px;
+  }
+  .para{
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  h1 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#00754A, rgb(212,233,226));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Position text in the top-left corner */
+  .topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+  }
+  
+  
+  /* Position text in the middle */
+  .middle {
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-bottom: 20%;
+  }
+  
+  /* Style the <hr> element */
+  hr {
+    margin: auto;
+    width: 40%;
+  }

@@ -1,0 +1,103 @@
+@import url(header.css);
+@import url(reset.css);
+@import url(footer.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&family=Sono:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:opsz,wght@8..30,400;8..30,500;8..30,600&family=Sono:wght@300&display=swap');
+
+
+body {
+    font-family: 'Piazzolla', serif;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+}
+
+header {
+    background-color: #666;
+    color: #fff;
+}
+
+main {
+    padding: 40px;
+}
+
+.imgag>img {
+    width: 80%;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+}
+
+.para {
+    font-size: 30px;
+    line-height: 55px;
+}
+
+.para section h1 {
+    font-family: 'Piazzolla', serif;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.para section h1 a {
+    font-family: 'Piazzolla', serif;
+    color: green;
+    font-size: 80px;
+    font-weight: 600;
+}
+.para section a {
+    font-family: 'Piazzolla', serif;
+    color: green;
+    font-size: 30px;
+    font-weight: 600;
+}
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-filter: blur(5px);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+}
+
+@media(prefer-reduce-motion) {
+    .hidden {
+        transition: none;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+    }
+}
+
+.show {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-filter: blur(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+
+
