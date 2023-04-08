@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+	// Path: Assignment\12-PS33100-PhamVanHieu-Assignment-Project-JS\script\cart.js
+
 	$(".largeGrid").click(function () {
 		$(this).find('a').addClass('active');
 		$('.smallGrid a').removeClass('active');
@@ -21,7 +23,7 @@ $(document).ready(function () {
 		$(this).find('a').addClass('active');
 		$('.largeGrid a').removeClass('active');
 
-		$('div.product').removeClass('large'); 
+		$('div.product').removeClass('large');
 		$(".make3D").removeClass('animate');
 		$('.info-large').fadeOut("fast");
 		setTimeout(function () {
@@ -295,11 +297,11 @@ $(document).ready(function () {
 		var productImage = $(productCard).find('img').get(0).src;
 		var productName = $(productCard).find('.product_name').get(0).innerHTML;
 
-		$("body").append('<div class="floating-cart"></div>');
+		$("body").append('<div cla' + 'ss="floating-cart"></div>');
 		var cart = $('div.floating-cart');
 		productCard.clone().appendTo(cart);
 		$(cart).css({ 'top': position.top + 'px', "left": position.left + 'px' }).fadeIn("slow").addClass('moveToCart');
-		setTimeout(function () { $("body").addClass("MakeFloatingCart"); }, 800);
+		setTimeout(function () { $("body").addClass("MakeFloatingCart"); }, 100);
 		/**
 		* chức năng để thêm mục xe vào xe mua sắm và flash xe khi mục được xóa khỏi mua sắm
 		*/
@@ -308,11 +310,11 @@ $(document).ready(function () {
 			$("body").removeClass("MakeFloatingCart");
 
 
-			var cartItem = "<div class='cart-item'><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>$39</strong><div class='cart-item-border'></div><div class='delete-item'></div></div>";
+			var cartItem = "<div class='cart-item'><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong class='price'>39</strong><div class='cart-item-border'></div><div class='delete-item'></div></div>";
 
 			$("#cart .empty").hide();
 			$("#cart").append(cartItem);
-			$("#checkout").fadeIn(500);
+			$("#checkout").fadeIn(100);
 
 			$("#cart .cart-item").last()
 				.addClass("flash")
@@ -320,12 +322,12 @@ $(document).ready(function () {
 				* Tắt mục khỏi giỏ và kiểm tra xem không còn các mục để làm như vậy (không cần nhấp vào hoặc " Thêm
 				*/
 				.find(".delete-item").click(function () {
-					$(this).parent().fadeOut(300, function () {
+					$(this).parent().fadeOut(100, function () {
 						$(this).remove();
 						// nếu các mặt hàng trong giỏ xe trống
 						if ($("#cart .cart-item").size() == 0) {
-							$("#cart .empty").fadeIn(500);
-							$("#checkout").fadeOut(500);
+							$("#cart .empty").fadeIn(100);
+							$("#checkout").fadeOut(100);
 						}
 					})
 				});
@@ -338,4 +340,18 @@ $(document).ready(function () {
 
 		}, 1000);
 	});
+
 });
+// Chức năng tính tổng tiền của giỏ hàng
+function calculateTotal() {
+	var total = 0;
+	$("#cart .cart-item").each(function () {
+		var price = parseFloat($(this).find(".price").text());
+		total += price;
+		console.log(total);
+		console.log(price);
+		document.getElementById("totalsprice").innerHTML = total + " $";
+	})
+	
+}
+

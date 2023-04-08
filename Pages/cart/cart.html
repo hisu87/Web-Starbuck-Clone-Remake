@@ -38,7 +38,7 @@
 <div id="wrapper">
 
 <div id="checkout">
-	<button class="checkout">Check Out</button>
+	<button class="checkout" onclick="calculateTotal()">Check Out</button>
 </div>
 
 
@@ -46,11 +46,14 @@
 <div id="sidebar">
 	<h3>CART</h3>
     <a href="#" class="cart">
-        <ion-icon name="cart-outline"></ion-icon>
+        <span class="total-price" id="totalsprice">$</span> <!-- Added this line to display total price -->
     </a>
     <div id="cart">
-    	<span class="empty">No items in cart.</span>       
+    	<span class="empty">No items in cart.</span>
+       
     </div>
+
+
     
     <h3>CATEGORIES</h3>
     <div class="checklist categories">
