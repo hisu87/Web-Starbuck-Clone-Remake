@@ -40,13 +40,13 @@
     <main>
         <div class="container" id="container">
 
-            <div class="form-container register-container">
+            <div class="form-container register-container" id="register-form">
                 <form action="#">
                     <h1>Register here.</h1>
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <button>Register</button>
+                    <input type="text" placeholder="Name" id="name">
+                    <input type="email" placeholder="Email" class="email">
+                    <input type="password" placeholder="Password" class="password">
+                    <button onclick="validateForm()">Register</button>
                     <span>or use your account</span>
                     <div class="social-container">
                         <a href="../comingsoon/comingsoon.html" class="social"><i class="fa-brands fa-facebook"></i></a>
@@ -56,11 +56,11 @@
                 </form>
             </div>
 
-            <div class="form-container login-container">
+            <div class="form-container login-container" id="login-form">
                 <form action="#">
                     <h1>Login here.</h1>
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
+                    <input type="email" placeholder="Email" class="email">
+                    <input type="password" placeholder="Password" class="password">
                     <div class="content">
                         <div class="checkbox">
                             <input type="checkbox" name="checkbox" id="checkbox">
@@ -70,7 +70,7 @@
                             <a href="#">Forgot password?</a>
                         </div>
                     </div>
-                    <button>Login</button>
+                    <button onclick="validateForm()">Login</button>
                     <span>or use your account</span>
                     <div class="social-container">
                         <a href="../comingsoon/comingsoon.html" class="social"><i class="fa-brands fa-facebook"></i></a>
@@ -85,7 +85,7 @@
                     <div class="overlay-panel overlay-left">
                         <h1 class="title">Hello <br> friends</h1>
                         <p>if You have an account, login here and have fun</p>
-                        <button class="ghost" id="login">Login
+                        <button class="ghost" id="login" onclick="">Login
                             <i class="lni lni-arrow-left login"></i>
                         </button>
                     </div>

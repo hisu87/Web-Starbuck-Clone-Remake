@@ -346,12 +346,13 @@ $(document).ready(function () {
 function calculateTotal() {
 	var total = 0;
 	$("#cart .cart-item").each(function () {
+		
 		var price = parseFloat($(this).find(".price").text());
 		total += price;
 		console.log(total);
 		console.log(price);
 		document.getElementById("totalsprice").innerHTML = total + " $";
 	})
-	
+	alert("Tổng tiền hóa đơn của bạn là: " + total + " $" +"Vui long thanh toán tại quầy khi nhận hàng");
 }
 

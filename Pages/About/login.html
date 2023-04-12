@@ -38,7 +38,7 @@
 
     <div class="login-form">
         <div class="overlay"></div>
-        <form action="index.html" method="post" class="box">
+        <form  class="box" onsubmit="return validateForm()">
             <div class="header">
                 <h4>Login To Your Account</h4>
                 <p>Happy to see you here</p>
@@ -46,6 +46,8 @@
             <div class="login-area">
                 <input type="text" class="username" placeholder="Username">
                 <input type="password" class="password" placeholder="Password">
+                <input type="text" class="email" placeholder="Email">
+                <input type="text" class="phone" placeholder="Phone Number">
                 <input type="submit" value="Login" class="submit">
                 <a href="../comingsoon/comingsoon.html">Forgot Password?</a>
                 <a href="../About/signup.html">Don't have an account ?</a>
@@ -153,7 +155,7 @@
             . All rights reserved.
         </div>
     </footer>
-
+<script src="../../script/signin.js"></script>
 </body>
 
 </html>

@@ -10,6 +10,7 @@ body {
 }
 header{
 	max-width: 100%;
+	background-color: #fff;
 }
 #wrapper{
 	overflow: hidden;
@@ -77,6 +78,10 @@ header{
 	padding:35px 0 10px 0;
 	letter-spacing:1px;
 	clear:both;
+}
+.totalspire{
+	color: #00754A;
+	font-size: 20px;  
 }
 #cart{
 	margin-left: 40px;

@@ -6,32 +6,36 @@ body {
     padding: 0;
     margin: 0;
     background-image: url(../img/login/bgc.png);
-    background-size:cover;
+    background-size: cover;
     font-family: 'Montserrat', sans-serif;
 }
-header{
+
+header {
     background-color: rgba(255, 255, 255, 0.8);
 }
+
 .menus__sub-menu {
     top: 20px;
     position: relative;
     font-size: 12px;
     margin: 0 50px 20px;
     cursor: pointer;
-  }
-  .menus__sub-menu >li >a{
+}
+
+.menus__sub-menu>li>a {
     font-size: 12px;
-   cursor: pointer;
-   position: relative;
-   top: -8.6px;
- }
+    cursor: pointer;
+    position: relative;
+    top: -8.6px;
+}
 
 
-.login-form{
+.login-form {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);;
+    transform: translate(-50%, -50%);
+    ;
 }
 
 .overlay {
@@ -63,9 +67,10 @@ header{
     border-radius: 15px 15px 0 0;
 }
 
-.header h4{
+.header h4 {
     font-size: 25px;
 }
+
 .header p {
     font-size: 15px;
 }
@@ -75,8 +80,7 @@ header{
     padding: 50px 50px 30px 50px;
 }
 
-.username,
-.password {
+.phone, .email, .username, .password {
     width: 100%;
     text-align: center;
     padding: 13px 0;
@@ -86,14 +90,19 @@ header{
     color: white;
     background-color: rgba(10, 114, 71, 0.5);
     margin-bottom: 15px;
-    transition: ,5s;
+    transition: , 5s;
 }
 
+
+.email::placeholder,
+.phone::placeholder,
 .username::placeholder,
 .password::placeholder {
     color: rgba(255, 255, 255, .7);
 }
 
+.email:focus,
+.phone:focus,
 .username:focus,
 .password:focus {
     background-color: rgba(10, 114, 71, 0.5);
@@ -124,23 +133,25 @@ a {
     color: rgba(55, 10, 114, 1);
     margin-top: 10px;
 }
+
 .code-credit {
     text-align: center;
     padding: 1rem 0;
     color: var(--color-text-soft);
-    border-top: 1px solid rgba(0,0,0,.3);
- }
- 
- .code-credit > .link {
+    border-top: 1px solid rgba(0, 0, 0, .3);
+}
+
+.code-credit>.link {
     font-weight: var(--font-semi);
     color: var(--color-green-apron);
- }
- 
- .code-credit > .link:hover {
+}
+
+.code-credit>.link:hover {
     text-decoration: underline;
- }
- footer{
-    position:absolute;
+}
+
+footer {
+    position: absolute;
     display: block;
     width: 100%;
     top: 90%;
